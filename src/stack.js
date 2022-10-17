@@ -22,9 +22,9 @@ class Stack {
 
     pop() {
         if (this.array.length == 0) return undefined //check array, if array is empty than return undefined
-        let res = this.array[this.array.length - 1] //capture top element 
+        let lastElem = this.array[this.array.length - 1] //capture top element 
         this.array = this.array.slice(0, this.array.length - 1) // delete top element
-        return res //return top element
+        return lastElem //return top element
     }
 
     peek() {
