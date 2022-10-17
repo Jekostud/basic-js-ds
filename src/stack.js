@@ -13,19 +13,23 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 class Stack {
-    array = [];
+
+    array = []; //create array with name "array"
+
     push(element) {
-        this.array = this.this.array.concat(element)
+        this.array = this.array.concat(element) //array = array plus (concat) element
     }
 
     pop() {
-        throw new NotImplementedError('Not implemented');
-        // remove line with error and write your code here
+        if (this.array.length == 0) return undefined //check array, if array is empty than return undefined
+        let res = this.array[this.array.length - 1] //capture top element 
+        this.array = this.array.slice(0, this.array.length - 1) // delete top element
+        return res //return top element
     }
 
     peek() {
-        throw new NotImplementedError('Not implemented');
-        // remove line with error and write your code here
+        if (this.array.length == 0) return undefined // check array for elements
+        return this.array[this.array.length - 1] // return top element
     }
 }
 
